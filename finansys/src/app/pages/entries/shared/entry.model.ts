@@ -13,11 +13,11 @@ export class Entry{
   ){}
 
   static types = {
-    expense:'Despesa',
-    renevue:'Receita'
-  }
+    expense: 'Despesa',
+    revenue: 'Receita'
+  };
 
-  get paidText(): String {
-    return this.paid ? 'Pago': 'Pedente'
+  get paidText(): string {
+    return this.paid ? 'Pago' : 'Pedente';
   }
 }
