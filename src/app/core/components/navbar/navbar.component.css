@@ -1,0 +1,13 @@
+.titleNavbar {
+    color: rgba(0, 0, 0, .7);
+    font-size: 1.5rem;
+}
+
+.subtitleNavbar {
+    font-size: 1.2rem;
+}
+
+.titleNavbar:hover {
+    color: rgba(0, 0, 0, .9);
+    font-size: 1.6rem;
+}

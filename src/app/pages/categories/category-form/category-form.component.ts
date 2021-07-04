@@ -9,7 +9,7 @@ import { BaseResourceFormComponent } from "../../../shared/components/base-resou
 @Component({
   selector: 'app-category-form',
   templateUrl: './category-form.component.html',
-  styleUrls: ['./category-form.component.css']
+  styleUrls: ['./category-form.component.css','../../../shared/components/css/global/global.component.css']
 })
 export class CategoryFormComponent extends BaseResourceFormComponent<Category>{
 

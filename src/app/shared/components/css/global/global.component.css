@@ -1,0 +1,31 @@
+.title-font {
+    font-family: 'Bebas Neue', cursive;
+}
+
+.subtitle-font {
+    font-family: 'Bebas Neue', cursive;
+}
+
+.font-open {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.font-open .w400 {
+    font-weight: 400;
+}
+
+.font-open .w300 {
+    font-weight: 300;
+}
+
+.bg-thead {
+    background-color: #ffc107e7
+}
+
+.btn-warning {
+    background-color: #ffc61a;
+}
+
+.tr-text {
+    color: rgba(0, 0, 0, .7);
+}

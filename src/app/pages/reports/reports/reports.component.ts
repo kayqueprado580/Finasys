@@ -7,10 +7,11 @@ import { Entry } from "../../entries/shared/entry.model";
 import { EntryService } from "../../entries/shared/entry.service";
 
 import currencyFormatter from "currency-formatter"
+
 @Component({
   selector: 'app-reports',
   templateUrl: './reports.component.html',
-  styleUrls: ['./reports.component.css']
+  styleUrls: ['./reports.component.css','../../../shared/components/css/global/global.component.css']
 })
 export class ReportsComponent implements OnInit {
 

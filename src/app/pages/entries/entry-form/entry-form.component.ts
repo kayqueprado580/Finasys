@@ -12,7 +12,7 @@ import { CategoryService } from "../../categories/shared/category.service";
 @Component({
   selector: 'app-entry-form',
   templateUrl: './entry-form.component.html',
-  styleUrls: ['./entry-form.component.css']
+  styleUrls: ['./entry-form.component.css','../../../shared/components/css/global/global.component.css']
 })
 export class EntryFormComponent extends BaseResourceFormComponent<Entry> implements OnInit{
 

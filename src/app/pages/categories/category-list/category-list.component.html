@@ -2,24 +2,26 @@
 
 <app-page-header page-title="Categorias" button-text="+ Nova Categoria" button-link="new" button-class="btn-success"></app-page-header>
 
-<table class="table table-hover">
-    <thead>
-        <tr class="bg-primary text-white">
-            <th>Categorias</th>
-            <th>Ações</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let category of resources">
-            <td>
-                <strong>{{category.name}}</strong>
-                <br>
-                <small>{{category.description}}</small>
-            </td>
-            <td>
-                <a [routerLink]="[category.id, 'edit']" class="btn btn-outline-info btn-sm mr-2">Editar</a>
-                <a (click)="deleteResource(category)" class="btn btn-outline-danger btn-sm">excluir</a>
-            </td>
-        </tr>
-    </tbody>
-</table>
+<div class="table-responsive">
+    <table class="table table-bordered table-hover table-striped">
+        <thead class="bg-thead">
+            <tr class="font-open w400 tr-text">
+                <th>Categorias</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody class="font-open w400">
+            <tr *ngFor="let category of resources">
+                <td>
+                    <strong>{{category.name}}</strong>
+                    <br>
+                    <small>{{category.description}}</small>
+                </td>
+                <td>
+                    <a [routerLink]="[category.id, 'edit']" class="btn btn-outline-info btn-sm mr-2">Editar</a>
+                    <a (click)="deleteResource(category)" class="btn btn-outline-danger btn-sm">excluir</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

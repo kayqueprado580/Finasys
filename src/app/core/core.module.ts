@@ -10,7 +10,6 @@ import { InMemoryDatabase } from "../in-memory-database";
 import { NavbarComponent } from './components/navbar/navbar.component';
 
 import { RouterModule } from '@angular/router';
-
 @NgModule({
   declarations: [NavbarComponent],
   imports: [

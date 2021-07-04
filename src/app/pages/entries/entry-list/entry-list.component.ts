@@ -7,7 +7,7 @@ import { EntryService } from "../shared/entry.service";
 @Component({
   selector: 'app-entry-list',
   templateUrl: './entry-list.component.html',
-  styleUrls: ['./entry-list.component.css']
+  styleUrls: ['./entry-list.component.css','../../../shared/components/css/global/global.component.css']
 })
 export class EntryListComponent extends BaseResourceListComponent <Entry> {
   constructor(private entryService: EntryService) {
