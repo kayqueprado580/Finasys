@@ -51,7 +51,7 @@ small.font-open {
     font-size: 1rem !important;
 }
 
-@media (max-height: 950px) {
+@media (max-height: 900px) {
     footer.nb-footer .footer-info-single {
         display: none;
     }
