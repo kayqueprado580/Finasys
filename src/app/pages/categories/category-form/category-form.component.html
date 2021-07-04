@@ -1,6 +1,6 @@
 <app-bread-crumb [items]="[{text: 'Categorias', link: '/categories'}, {text: pageTitle}]"></app-bread-crumb>
 
-<app-page-header [page-title]="pageTitle" button-text="<< Voltar" button-link="/categories" button-class="btn-light"></app-page-header>
+<app-page-header [page-title]="pageTitle" button-text="" type-button="back" button-link="/categories" button-class="bg-transparent"></app-page-header>
 
 <form [formGroup]="resourceForm" (submit)="submitForm()">
 
@@ -26,14 +26,16 @@
                     <input type="text" class="form-control" id="description" formControlName="description">
                 </div>
             </div>
+
+            <button [disabled]="submittingForm || resourceForm.invalid" type="submit" class="btn btn-success btn-lg float-right mb-2">
+              Salvar
+            </button>
         </div>
     </div>
 
 
     <app-server-error-messages [server-error-messages]="serverErrorMessages"></app-server-error-messages>
 
-    <button [disabled]="submittingForm || resourceForm.invalid" type="submit" class="btn btn-warning btn-lg float-right mt-3">
-    Salvar
-  </button>
+
 
 </form>

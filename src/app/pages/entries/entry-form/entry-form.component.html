@@ -1,6 +1,7 @@
 <app-bread-crumb [items]="[{text: 'Lançamentos', link: '/entries'}, {text: pageTitle}]"></app-bread-crumb>
 
-<app-page-header [page-title]="pageTitle" button-text="<< Voltar" button-link="/entries" button-class="btn-light"></app-page-header>
+<app-page-header [page-title]="pageTitle" type-button="back" button-link="/entries" button-class="">
+</app-page-header>
 
 <form [formGroup]="resourceForm" (submit)="submitForm()">
     <div class="card">
@@ -15,8 +16,8 @@
                 <div class="form-group col-md-2">
                     <label for="type">Tipo</label>
                     <select name="type" id="type" formControlName="type" class="form-control">
-                      <option *ngFor="let option of typeOptions" [ngValue]="option.value">{{option.text}}</option>
-                    </select>
+            <option *ngFor="let option of typeOptions" [ngValue]="option.value">{{option.text}}</option>
+          </select>
                     <app-form-field-error [form-control]="resourceForm.get('type')"></app-form-field-error>
                 </div>
 
@@ -55,7 +56,6 @@
             </div>
 
             <div class="form-row">
-
                 <!-- Paid -->
                 <div class="form-group col-md-2">
                     <label for="paid">Pago</label>
@@ -78,19 +78,20 @@
                 <div class="form-group col-md-3">
                     <label for="categoryId">Categorias</label>
                     <select name="categoryId" id="categoryId" formControlName="categoryId" class="form-control">
-                      <option *ngFor="let category of categories" [value]="category.id">{{category.name}}</option>
-                    </select>
+            <option *ngFor="let category of categories" [value]="category.id">{{category.name}}</option>
+          </select>
                     <app-form-field-error [form-control]="resourceForm.get('categoryId')"></app-form-field-error>
                 </div>
-
             </div>
+
+            <button [disabled]="submittingForm || resourceForm.invalid " type="submit " class="btn btn-success btn-lg float-right mb-2">
+        Salvar
+      </button>
 
         </div>
     </div>
 
     <app-server-error-messages [server-error-messages]="serverErrorMessages"></app-server-error-messages>
 
-    <button [disabled]="submittingForm || resourceForm.invalid " type="submit " class="btn btn-warning btn-lg float-right mt-3 ">
-    Salvar
-  </button>
+
 </form>
