@@ -1,0 +1,27 @@
+<app-bread-crumb [items]="[{text: 'Categorias'}]"></app-bread-crumb>
+
+<app-page-header page-title="Categorias" button-text="Nova Categoria" button-link="new" type-button="new" button-class="btn-outline-success"></app-page-header>
+
+<div class="table-responsive">
+    <table class="table table-bordered table-hover table-striped">
+        <thead class="bg-thead">
+            <tr class="font-open w400 tr-text">
+                <th class="text-center">Categorias</th>
+                <th class="text-center">Ações</th>
+            </tr>
+        </thead>
+        <tbody class="font-open w400">
+            <tr *ngFor="let category of resources">
+                <td>
+                    <strong>{{category.name}}</strong>
+                    <br>
+                    <small>{{category.description}}</small>
+                </td>
+                <td class="text-center">
+                    <a [routerLink]="[category.id, 'edit']" class="btn btn-outline-info btn-sm mr-2"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                    <a (click)="deleteResource(category)" class="btn btn-outline-danger btn-sm"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

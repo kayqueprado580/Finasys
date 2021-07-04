@@ -1,0 +1,16 @@
+<div class="row mb-4">
+    <div class="col-md-8">
+        <h2 class="title-font">
+            {{pageTitle}}
+        </h2>
+    </div>
+    <div *ngIf="showButton" class="col-md-4 text-right">
+        <a [routerLink]="buttonLink" [ngClass]="buttonClass" class="btn" *ngIf="typeButton == 'new'">
+            <i class="fa fa-plus mr-1" aria-hidden="true"></i> {{buttonText}}
+        </a>
+
+        <a [routerLink]="buttonLink" [ngClass]="buttonClass" class="btn" *ngIf="typeButton != 'new'">
+            <i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
+        </a>
+    </div>
+</div>

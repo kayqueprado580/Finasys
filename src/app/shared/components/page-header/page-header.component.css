@@ -1,0 +1,19 @@
+a {
+    cursor: pointer;
+}
+
+.fa-arrow-left {
+    color: black;
+    /* display: flex;
+    margin-left: 17.5rem; */
+}
+
+.fa-arrow-left:hover {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+@media(max-width: 1200px) {
+    .fa-arrow-left {
+        margin-left: 0;
+    }
+}
