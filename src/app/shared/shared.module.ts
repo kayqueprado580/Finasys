@@ -7,9 +7,10 @@ import { PageHeaderComponent } from './components/page-header/page-header.compon
 import { FormFieldErrorComponent } from './components/form-field-error/form-field-error.component';
 import { ServerErrorMessagesComponent } from './components/server-error-messages/server-error-messages.component';
 import { GlobalComponent } from './components/css/global/global.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
-  declarations: [BreadCrumbComponent, PageHeaderComponent, FormFieldErrorComponent, ServerErrorMessagesComponent, GlobalComponent],
+  declarations: [BreadCrumbComponent, PageHeaderComponent, FormFieldErrorComponent, ServerErrorMessagesComponent, GlobalComponent, FooterComponent],
   imports: [
     CommonModule,
     ReactiveFormsModule,
@@ -26,7 +27,8 @@ import { GlobalComponent } from './components/css/global/global.component';
     PageHeaderComponent,
     FormFieldErrorComponent,
     ServerErrorMessagesComponent,
-    GlobalComponent
+    GlobalComponent,
+    FooterComponent
   ]
 })
 export class SharedModule { }
