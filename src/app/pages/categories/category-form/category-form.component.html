@@ -1,0 +1,41 @@
+<app-bread-crumb [items]="[{text: 'Categorias', link: '/categories'}, {text: pageTitle}]"></app-bread-crumb>
+
+<app-page-header [page-title]="pageTitle" button-text="" type-button="back" button-link="/categories" button-class="bg-transparent"></app-page-header>
+
+<form [formGroup]="resourceForm" (submit)="submitForm()">
+
+    <div class="card">
+        <div class="card-header">
+            Informações sobre a categoria
+        </div>
+
+        <div class="card-body">
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="name">Nome</label>
+                    <input type="text" class="form-control" id="name" formControlName="name">
+
+                    <div class="text-danger" *ngIf="resourceForm.get('name').invalid && resourceForm.get('name').touched">
+                        <div *ngIf="resourceForm.get('name').errors.required">dado obrigatório</div>
+                        <div *ngIf="resourceForm.get('name').errors.minlength">deve ter no mínimo 2 caracteres</div>
+                    </div>
+                </div>
+
+                <div class="form-group col-md-8">
+                    <label for="description">Descrição</label>
+                    <input type="text" class="form-control" id="description" formControlName="description">
+                </div>
+            </div>
+
+            <button [disabled]="submittingForm || resourceForm.invalid" type="submit" class="btn btn-outline-success btn-lg float-right mb-2">
+              <i class="fa fa-floppy-o mr-2" aria-hidden="true"></i>Salvar
+            </button>
+        </div>
+    </div>
+
+
+    <app-server-error-messages [server-error-messages]="serverErrorMessages"></app-server-error-messages>
+
+
+
+</form>
